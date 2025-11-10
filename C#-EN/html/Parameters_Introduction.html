@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/iframe.css" />
+<link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/jquery.jsonview.css" />
+<link rel="stylesheet" href="../styles/shCore.css" />
+<link rel="stylesheet" href="../styles/shCoreDefault.css" />
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/iframePage.js"></script>
+<script src="../js/utility_en.js"></script>
+<script src="../js/jquery.jsonview.js"></script>
+<script src="../scripts/shCore.js"></script>
+<script src="../scripts/shBrushJava.js"></script>
+<script src="../scripts/shBrushCpp.js"></script>
+<script src="../scripts/shBrushCSharp.js"></script>
+<script src="../scripts/shBrushJScript.js"></script>
+<script src="../scripts/shBrushPython.js"></script>
+<script src="../scripts/shBrushPlain.js"></script>
+</head>
+<body>
+<div class="box clearfix" id="footflag">
+<div class="top-bar">
+<div class="logo-box">
+<a >
+<img src="../images/top-logo.png" alt="" />
+</a>
+</div>
+<div class="title-box">
+<table>
+<tr>
+<td class="title-text">ModuleAPI C# Version Developer's Guide
+</td>
+<td>
+<a >
+<img src="../images/arrow.png"  style="width:39px; height:25px; padding-right:30px;" title="Back to document center"/>
+</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="side-bar">
+<ul id="mainmenu">
+</ul>
+</div>
+<div class="contain">
+<div class="iframeBox">
+<div class="iframe_title">Parameters Introduction</div>
+<div class="beftitle">
+&nbsp;&nbsp;&nbsp;
+</div>
+<div class="beftitle">
+Parameters could be divided into read only and readable and writable parameter write two kinds. A parameter of reader will work consistently until it is set to other value.
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p >Readable and writable parameters</p>
+</div>
+<div class="content_inner block" >
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Key string</th>
+<th >Parameter meaning</th>
+<th >Value type</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >IPAddress</td>
+<td >Ip address</td>
+<td ><a href=MODULETECH.html#Re_ad_er_IP_In_fo>ReaderIPInfo</a></td>
+<td >Reader will restart after ip is set successfully, so we need to reconnect the readers. For the reader based linux OS it won't restart automatically, Reboot method can do it.</td>
+</tr>
+<tr>
+<td >Gen2Session</td>
+<td >Gen2 session</td>
+<td >ModuleTech.Gen2.<a href=MODULETECH_GEN2.html#Se_ss_ion>Session</a></td>
+<td >For small amount but fast-moving tags using Session0; for large amount but slow-moving tags using Session1.</td>
+</tr>
+<tr>
+<td >Gen2Qvalue</td>
+<td >Gen2 Q value</td>
+<td >int</td>
+<td >Value ranges from -1 to 15,</td>
+</tr>
+<tr>
+<td >ReadPlan</td>
+<td >The antenna setting when inventory</td>
+<td >ReadPlan</td>
+<td >Attention: do not execute any tag operation on antenna ports without antenna connection.</td>
+</tr>
+<tr>
+<td ><a href=MODULETECH.html#Re_gi_on>Region</a></td>
+<td >Frequency regulatory of reader</td>
+<td ><a href=MODULETECH.html#Re_gi_on>Region</a></td>
+<td style="border-bottom:0; border-top:0;"></td>
+</tr>
+<tr>
+<td >TagopAntenna</td>
+<td >Which antenna to use when executing tag operations except inventory</td>
+<td >int</td>
+<td >Only one antenna must be specified before invoking tag operations, except inventory function. Do not specify the antenna port without antenna connection.</td>
+</tr>
+<tr>
+<td >TagopProtocol</td>
+<td >Which protocol to run when executing tag operations except inventory</td>
+<td ><a href=MODULETECH.html#Ta_gP_ro_to_col>TagProtocol</a></td>
+<td >The protocol must be specified before invoking tag operations, except inventory function.</td>
+</tr>
+<tr>
+<td >AccessPassword</td>
+<td >The access password</td>
+<td >uint</td>
+<td >Specify the access password of tag if needed.</td>
+</tr>
+<tr>
+<td >Singulation</td>
+<td >Tag filter</td>
+<td ><a href=MODULETECH.html#Ta_gF_il_ter>TagFilter</a></td>
+<td >Tag filter is the selection criteria for tags when inventory operation. When you don't use filter criteria you could set this parameter as null.</td>
+</tr>
+<tr>
+<td >OpTimeout</td>
+<td >The operation timeout except inventory.</td>
+<td >ushort</td>
+<td >The maximum duration to block operation in milliseconds.</td>
+</tr>
+<tr>
+<td >EmbededCmdOfInventory</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> data of another bank while inventory operation running.</td>
+<td ><a href=MODULETECH.html#Em_be_de_dC_md_Da_ta>EmbededCmdData</a></td>
+<td >Disable this feature please set it as null.</td>
+</tr>
+<tr>
+<td ><a href=MODULETECH.html#Ba_ck_Re_ad_Op_ti_on>BackReadOption</a></td>
+<td >Details settings of the Asynchronous Inventory</td>
+<td ><a href=MODULETECH.html#Ba_ck_Re_ad_Op_ti_on>BackReadOption</a></td>
+<td >This parameter specifies many details of the asynchronous inventory. Before starting the asynchronous inventory, you must ensure that this parameter has been set, otherwise an exception will be thrown.</td>
+</tr>
+<tr>
+<td >AntPowerConf</td>
+<td >Configuration of every antenna tx power.</td>
+<td ><a href=MODULETECH.html#An_tP_ow_er>AntPower</a>[]</td>
+<td >The default antenna power after reader powers up is two third of the maximum power. (for slr1000 its read power and write power must be equal.）</td>
+</tr>
+<tr>
+<td >FrequencyHopTable</td>
+<td >Set the frequency hopping table of reader.</td>
+<td >uint[]</td>
+<td >The frequency point must be within the spectrum of region regulatory. </td>
+</tr>
+<tr>
+<td >Gen2Target</td>
+<td >Gen2 target</td>
+<td >ModuleTech.Gen2.<a href=MODULETECH_GEN2.html#Ta_rg_et>Target</a></td>
+<td >The parameter of gen2 air interface.</td>
+</tr>
+<tr>
+<td >Gen2WriteMode</td>
+<td >Gen2 writing mode</td>
+<td >ModuleTech.Gen2.<a href=MODULETECH_GEN2.html#Wr_it_eM_ode>WriteMode</a></td>
+<td >Only support WORD_ONLY and BLOCK_ONLY </td>
+</tr>
+<tr>
+<td >IsTagDataUniqueByAnt</td>
+<td >Whether to use Antenna Port as </td>
+<td >bool</td>
+<td style="border-bottom:0; border-top:0;"></td>
+</tr>
+<tr>
+<td >IsTagDataUniqueByEmddata</td>
+<td >Whether to use Tag Data as Unique </td>
+<td >bool</td>
+<td style="border-bottom:0; border-top:0;"></td>
+</tr>
+<tr>
+<td >IsTagdataRecordHighestRssi</td>
+<td >Whether to record the highest </td>
+<td >bool</td>
+<td style="border-bottom:0; border-top:0;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p ><a href=Synchronous_Inventory.html#Re_ad>Read</a>-only parameters</p>
+</div>
+<div class="content_inner block" >
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Key string</th>
+<th >Parameter meaning</th>
+<th >Value type</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >BootloaderVersion</td>
+<td >Bootloader version</td>
+<td >string</td>
+<td style="border-bottom:0; border-top:0;"></td>
+</tr>
+<tr>
+<td >ConnectedAntennas</td>
+<td >The connected antennas</td>
+<td >int[]</td>
+<td >Not all kinds of antennas could be detected.</td>
+</tr>
+<tr>
+<td >HardwareVersion</td>
+<td >Hardware version</td>
+<td >string</td>
+<td style="border-bottom:0; border-top:0;"></td>
+</tr>
+<tr>
+<td >SoftwareVersion</td>
+<td >Firmware version</td>
+<td >string</td>
+<td style="border-bottom:0; border-top:0;"></td>
+</tr>
+<tr>
+<td >RfPowerMax</td>
+<td >Max power</td>
+<td >int</td>
+<td >The maximum power in centi-dBm.</td>
+</tr>
+<tr>
+<td >RfPowerMin</td>
+<td >Min power</td>
+<td >int</td>
+<td >The minimum power in centi-dBm.</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+</div>
+</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div></div>
+</div></body>
+</html><script>
+$(function() {
+$(document).ready(function (){
+
+positionFooter();
+});
+$(window).resize(function () {
+positionFooter();
+});
+});
+</script>

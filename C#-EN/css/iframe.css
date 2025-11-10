@@ -1,0 +1,249 @@
+/*iframe页样式*/
+
+.iframeBox{
+    width: 100%;
+    height: 100%;
+    min-width: 600px;
+    background:#ffffff;
+}
+.iframeBox .iframe_title{
+    color: #333;
+    font:20px "微软雅黑";
+    padding: 0px 20px;
+}
+.iframeBox .beftitle{
+    color: #333;
+    font:14px "微软雅黑";
+    padding-left:20px;
+    line-height:21.5px;
+    word-wrap:break-word;
+}
+
+.content-box{
+    margin-top: 16px;
+    margin-left: 20px;
+}
+.content-title{
+    border-bottom: 1px solid #dfdfdf;
+    padding: 10px 0 ;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+.content-title:hover{
+    background: #f5f5f5;
+}
+.content-title .icon_triangle{
+    position: absolute;
+    top: 16px;
+    left: 13px;
+    border-width:6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #666666;
+}
+.content-title .icon_triangle.open{
+    top:18px;
+    border-color: #666666 transparent transparent transparent;
+}
+.content-title p{
+    float: left;
+    margin-left: 30px;
+}
+.content-box .content_inner{
+    margin-top: 15px;
+    display: none;
+}
+.content_inner.block{
+    display: block;
+}
+.content_inner table{
+    width: 100%;
+    border-collapse: collapse;
+}          
+.content_inner .inner_title{
+		word-wrap: break-word;
+    font-size: 14px;
+    line-height:21.5px;
+}
+.content_inner .inner_specnote{
+		word-wrap: break-word;
+    font-size: 14px;
+    line-height:21.5px;
+    color: red;
+}
+
+.inner_list {
+		word-wrap: break-word;
+    font-size: 14px;
+    line-height:21.5px;
+    list-style: disc;
+    padding-left: 50px;
+}
+
+/*
+.inner_list {
+		word-wrap: break-word;
+    font-size: 14px;
+    line-height:21.5px;
+    list-style: disc;
+    padding-left: 20px;
+}*/
+.inter_list_item {
+	margin-bottom: 5px;
+}
+.content_inner .inner_subitem{
+		word-wrap: break-word;
+    font-size: 15.5px;
+    line-height:22px;
+    margin-bottom: 7px;
+    font-weight:600;
+}
+.content_inner .inner_subtitle{
+		word-wrap: break-word;
+    font-size: 14px;
+    line-height:21.5px;
+    font-weight:600;
+}
+.apidoctab th{
+    background: #666;
+    color: #fff;
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    font-weight: normal;
+    max-width: 300px;
+    font:14px "微软雅黑";
+    color: #FFFFFF;
+}
+.apidoctab td{
+    word-wrap: break-word;
+    white-space: normal;
+    border: 1px solid #dddddd;
+    padding: 5px 10px;
+    max-width: 300px;
+    font:14px "微软雅黑";
+    color: #333;
+    
+}
+
+.content_inner .tab_box ul{
+    border-bottom: 1px solid #dddddd;
+}
+.content_inner .tab_box li{
+    float: left;
+    margin-right: 2px;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 0 10px;
+    background: #f5f5f5;
+    border:1px solid #dddddd;
+    margin-bottom: -1px;
+    cursor: pointer;
+}
+.content_inner .tab_box li.cur{
+    border-bottom-color: #FFFFFF;
+    background: #FFFFFF;
+}
+.tab_inner{
+    margin-top: 20px;
+}
+.tab_inner .tab_innerCell{
+    display: none;
+    padding: 10px 20px;
+    background: #f5f5f5;
+}
+.tab_inner .tab_innerCell.show{
+    display: block;
+}
+
+.jsonpre {
+	width: 100%;
+	box-sizing: border-box;
+	border: 0px;
+  	font-family: "微软雅黑";
+  	font-size: 14px;
+	outline:none;
+	background: #f5f5f5;
+	padding-left:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+
+.content_inner div .CpJson{
+	position: absolute;
+	width:16px;
+	height:15px;
+	background-image: url(../images/0.png);
+	top:7px;
+	left:7px;
+	cursor: pointer;
+}
+
+.content_inner div .CpJsonline{
+	position: absolute;
+	width:16px;
+	height:5px;
+	background-image: url(../images/2.png);
+	top:13px;
+	left:37px;
+	cursor: pointer;
+}
+
+.content_inner div .Jsonobj{
+	position: absolute;
+	width:16px;
+	height:14px;
+
+	background-image: url(../images/jobj.png);
+	top:7.5px;
+	left:67px;
+	cursor: pointer;
+}
+
+.content_inner .cppngfat{
+	background: #f5f5f5;
+	margin-top: 10px; 
+	height: 20px;
+	position: relative;
+}
+
+.content_inner .DivJsonFmt{
+	background: #f5f5f5;
+	border: 5px solid #f5f5f5; 
+	overflow-y:auto;
+}
+.content_inner .gray_title{
+	background: #f5f5f5;
+	padding-left:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+a{
+	color: #20bafd;
+}
+[IsSpecWord]
+{
+//	color: blue;
+}
+
+hr{
+ height:2px;
+ border:none;
+ border-top:1px solid rgb(102,102,102);
+ padding-bottom:10px;
+}
+
+.apidoctab tbody tr{	
+	height: 40px;
+}
+
+.apidoctab tbody tr:hover{
+	background-color: #F0F8FF;
+}
+
+.apidoctab thead tr{
+	height: 32px;
+}

@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/iframe.css" />
+<link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/jquery.jsonview.css" />
+<link rel="stylesheet" href="../styles/shCore.css" />
+<link rel="stylesheet" href="../styles/shCoreDefault.css" />
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/iframePage.js"></script>
+<script src="../js/utility_en.js"></script>
+<script src="../js/jquery.jsonview.js"></script>
+<script src="../scripts/shCore.js"></script>
+<script src="../scripts/shBrushJava.js"></script>
+<script src="../scripts/shBrushCpp.js"></script>
+<script src="../scripts/shBrushCSharp.js"></script>
+<script src="../scripts/shBrushJScript.js"></script>
+<script src="../scripts/shBrushPython.js"></script>
+<script src="../scripts/shBrushPlain.js"></script>
+</head>
+<body>
+<div class="box clearfix" id="footflag">
+<div class="top-bar">
+<div class="logo-box">
+<a >
+<img src="../images/top-logo.png" alt="" />
+</a>
+</div>
+<div class="title-box">
+<table>
+<tr>
+<td class="title-text">ModuleAPI C# Version Developer's Guide
+</td>
+<td>
+<a >
+<img src="../images/arrow.png"  style="width:39px; height:25px; padding-right:30px;" title="Back to document center"/>
+</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="side-bar">
+<ul id="mainmenu">
+</ul>
+</div>
+<div class="contain">
+<div class="iframeBox">
+<div class="iframe_title">MODULETECH</div>
+<div class="beftitle">
+&nbsp;&nbsp;
+</div>
+<div class="beftitle">
+Defines some base classes associated with tag operations and the Reader class, the Reader class contains various methods of tag operation and methods related to configuring reader parameters.
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p >Reader Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">This is the most important class, encapsulates all the functions of tag operation and manages the life cycle of reader</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Main Methods</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Method name</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td ><a href=Reader_Life_Cycle.html#Cr_ea_te>Create</a></td>
+<td ><a href=Reader_Life_Cycle.html#Cr_ea_te>Create</a> an instance of the Reader class.</td>
+</tr>
+<tr>
+<td ><a href=Reader_Life_Cycle.html#Di_sc_on_ne_ct>Disconnect</a></td>
+<td >Free the resource of the instance of the reader class.</td>
+</tr>
+<tr>
+<td ><a href=Get_Parameters.html#Pa_ra_mG_et>ParamGet</a></td>
+<td >Get parameters of reader.</td>
+</tr>
+<tr>
+<td ><a href=Set_Parameters.html#Pa_ra_mS_et>ParamSet</a></td>
+<td >Set parameters of reader.</td>
+</tr>
+<tr>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a></td>
+<td >Synchronous inventory operation.</td>
+</tr>
+<tr>
+<td ><a href=Start_Inventory.html#St_ar_tR_ea_di_ng>StartReading</a></td>
+<td >Start asynchronous inventory operation.</td>
+</tr>
+<tr>
+<td ><a href=Stop_Inventory.html#St_op_Re_ad_ing>StopReading</a></td>
+<td >Stop asynchronous inventory operation.</td>
+</tr>
+<tr>
+<td ><a href=Read_Tag.html#Re_ad_Ta_gM_em_Wo_rds>ReadTagMemWords</a></td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> the data block of the tag's one storage area.</td>
+</tr>
+<tr>
+<td ><a href=Write_Tag.html#Wr_it_eT_ag_Me_mW_or_ds>WriteTagMemWords</a></td>
+<td >Write data block to tag's one storage area.</td>
+</tr>
+<tr>
+<td ><a href=Write_Tag_EPC.html#Wr_it_eT_ag>WriteTag</a></td>
+<td >Write the EPC code of a tag.</td>
+</tr>
+<tr>
+<td ><a href=Lock_Tag.html#Lo_ck_Tag>LockTag</a></td>
+<td >Lock the tag's storage areas.</td>
+</tr>
+<tr>
+<td ><a href=kill_Tag.html#Ki_ll_Tag>KillTag</a></td>
+<td >Kill a tag</td>
+</tr>
+<tr>
+<td ><a href=Get_GPI.html#GP_IG_et>GPIGet</a></td>
+<td >Get GPI state</td>
+</tr>
+<tr>
+<td ><a href=Set_GPO.html#GP_OS_et>GPOSet</a></td>
+<td >Set GPO state</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p >ByteFormat Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Convert among hexadecimal string, ushort array and byte array.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subitem">FromHex method</div>
+<hr />
+<div   class="inner_title gray_title">Convert hexadecimal string to byte array.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Method Signature</div>
+<pre class="brush: plain;">  
+public static byte[] FromHex(string hex)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >hex</td>
+<td >The hexadecimal string to convert.</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Return Value</div>
+<div   class="inner_title">Hexadecimal string</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Example</div>
+<pre class="brush: plain;">  
+byte[] bepc = ByteFormat.FromHex("1234abcd");
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subitem">ToHex Method</div>
+<hr />
+<div   class="inner_title gray_title">Convert ushort array to hexadecimal string.</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Method Signature</div>
+<pre class="brush: plain;">  
+public static string ToHex(ushort[] words)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >words</td>
+<td >The ushort array to convert.</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Return Value</div>
+<div   class="inner_title">Hexadecimal string</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Example</div>
+<pre class="brush: plain;">  
+string readdata = ByteFormat.ToHex(new ushort[] {1,2,4});
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subitem">ToHex Method</div>
+<hr />
+<div   class="inner_title gray_title">Convert bytes array to hexadecimal string.</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Method Signature</div>
+<pre class="brush: csharp;">  
+public static string ToHex(byte[] bytes)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >bytes</td>
+<td >The bytes array to convert.</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Return value</div>
+<div   class="inner_title">Hexadecimal string</div>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Example</div>
+<pre class="brush: csharp;">  
+string epc = ByteFormat.ToHex(new byte[] {1,2,3,4});
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Si_mp_le_Re_ad_Pl_an" IsSpecWord="yes">SimpleReadPlan Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Specify the antennas and tag protocol when inventory. ModuleTech.ReadPlan is the base class which would not be used in practice.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subitem">Constructor</div>
+<hr />
+<pre class="brush: csharp;">  
+public SimpleReadPlan(int[] antennas)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >antennas</td>
+<td >The working antennas when inventory</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Example</div>
+<div   class="inner_title">Use No.1 No.2 and No.4 antenna when inventory.</div>
+<pre class="brush: csharp;">  
+int [] ants = new int[]{1, 2, 4};
+SimpleReadPlan plan = new SimpleReadPlan(ants);
+</pre>  
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Re_gi_on" IsSpecWord="yes">Region Enumeration</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">The working frequency regulatory of reader, it is usually set as ModuleTech.<a href=MODULETECH.html#Re_gi_on>Region</a>.NA.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Member</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >UNSPEC</td>
+<td >Unspecific area</td>
+</tr>
+<tr>
+<td >CN</td>
+<td >Canada</td>
+</tr>
+<tr>
+<td >EU</td>
+<td >Europe version 1(LBT)</td>
+</tr>
+<tr>
+<td >EU2</td>
+<td >Europe version 2</td>
+</tr>
+<tr>
+<td >EU3</td>
+<td >Europe version3 (no LBT)</td>
+</tr>
+<tr>
+<td >IN</td>
+<td >India</td>
+</tr>
+<tr>
+<td >KR</td>
+<td >Korea</td>
+</tr>
+<tr>
+<td >JP</td>
+<td >Japan</td>
+</tr>
+<tr>
+<td >NA</td>
+<td >North America</td>
+</tr>
+<tr>
+<td >PRC</td>
+<td >China (920-925)</td>
+</tr>
+<tr>
+<td >PRC2</td>
+<td >China（840-845）</td>
+</tr>
+<tr>
+<td >OPEN</td>
+<td >Full frequency（860-960）</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Re_ad_er_IP_In_fo" IsSpecWord="yes">ReaderIPInfo Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">The IP information of reader, using <a href=MODULETECH.html#Re_ad_er_IP_In_fo>ReaderIPInfo</a>.<a href=Reader_Life_Cycle.html#Cr_ea_te>Create</a> create <a href=MODULETECH.html#Re_ad_er_IP_In_fo>ReaderIPInfo</a></div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Attributes</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute </th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >GATEWAY</td>
+<td >Gateway</td>
+</tr>
+<tr>
+<td >IP</td>
+<td >IP address</td>
+</tr>
+<tr>
+<td >SUBNET</td>
+<td >Subnet mask</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subitem">Constructor</div>
+<hr />
+<pre class="brush: csharp;">  
+public static ModuleTech.ReaderIPInfo Create(string ip, string subnet, string gateway)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >ip</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, the IP address of reader.</td>
+</tr>
+<tr>
+<td >subnet</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, the subnet mask of reader.</td>
+</tr>
+<tr>
+<td >gateway</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, the gateway of reader.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p ><a href=MODULETECH.html#Re_ad_er_IP_In_fo__Ex>ReaderIPInfo_Ex</a>.WifiSetting Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">The wifi settings</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Attributes</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >Auth</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, WiFi authentication mode.</td>
+</tr>
+<tr>
+<td >SSID</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, WiFi ssid.</td>
+</tr>
+<tr>
+<td >KEY</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, WiFi password.</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subitem">Constructor</div>
+<hr />
+<pre class="brush: csharp;">  
+WifiSetting(AuthMode auth, string ssid, KeyType ktype, string key)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Decription</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >auth</td>
+<td >WiFi authentication mode，Legal value：AuthMode_Open，AuthMode_Open_Wep, AuthMode_Shared_Wep，AuthMode_Wpa_Psk, AuthMode_Wpa2_Psk.</td>
+</tr>
+<tr>
+<td >ssid</td>
+<td >SSID of WiFi setting.</td>
+</tr>
+<tr>
+<td >ktype</td>
+<td >Wifi password type, Legal value: KeyType_HEX means hexadecimal characte，KeyType_ASC2 means ASC2 character.</td>
+</tr>
+<tr>
+<td >key</td>
+<td >Password</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Re_ad_er_IP_In_fo__Ex" IsSpecWord="yes">ReaderIPInfo_Ex Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">The reader IP information including  the wifi parameter </div>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Attributes</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >IPInfo</td>
+<td >Basic IP information.</td>
+</tr>
+<tr>
+<td >NType</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, net type.</td>
+</tr>
+<tr>
+<td >Wifi</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, WiFi setting parameter.</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subitem">Constructor</div>
+<hr />
+<pre class="brush: csharp;">  
+ReaderIPInfo_Ex(ReaderIPInfo ip, NetType type, WifiSetting wifi)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >ip</td>
+<td >IP, subnet mask, gateaway</td>
+</tr>
+<tr>
+<td >type</td>
+<td >Net type，legal value: NetType_Ethernet, NetType_Wifi</td>
+</tr>
+<tr>
+<td >wifi</td>
+<td >WiFi setting parameter</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ta_gD_ata" IsSpecWord="yes">TagData Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">using for function <a href=Write_Tag_EPC.html#Wr_it_eT_ag>WriteTag</a></div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subitem">Constructor</div>
+<hr />
+<pre class="brush: csharp;">  
+public TagData(byte[] epc)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >epc</td>
+<td >EPC data</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subitem">Constructor</div>
+<hr />
+<pre class="brush: csharp;">  
+public TagData(string epc)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >epc</td>
+<td >EPC data represented by hexadecimal string</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ta_gF_il_ter" IsSpecWord="yes">TagFilter Interface</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Use for filter tags when tag operation</div>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ta_gL_oc_kA_ct_ion" IsSpecWord="yes">TagLockAction Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">The base class of ModuleTech.Gen2.<a href=MODULETECH_GEN2.html#Ge_n2_Lo_ck_Ac_ti_on>Gen2LockAction</a> </div>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ta_gP_ro_to_col" IsSpecWord="yes">TagProtocol Enumeration</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Air interface protocol </div>
+<div   class="inner_title">&nbsp;</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Member</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >EPC0_IMPINJ</td>
+<td >EPC0 of IMPINJ</td>
+</tr>
+<tr>
+<td >EPC0_MATRICS</td>
+<td >EPC0 of MATRICS</td>
+</tr>
+<tr>
+<td >EPC1</td>
+<td >EPC1 protocol</td>
+</tr>
+<tr>
+<td >GEN2</td>
+<td >GEN2 protocol</td>
+</tr>
+<tr>
+<td >ISO18000_6B</td>
+<td >ISO 18000-6B protocol</td>
+</tr>
+<tr>
+<td >NONE</td>
+<td >None</td>
+</tr>
+<tr>
+<td >UCODE</td>
+<td >UCODE protocol</td>
+</tr>
+<tr>
+<td >IPX64</td>
+<td >IPX64 protocol</td>
+</tr>
+<tr>
+<td >IPX256</td>
+<td >IPX256 protocol</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ta_gR_ea_dD_ata" IsSpecWord="yes">TagReadData Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">The result of Inventory</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Attributes</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >Antenna</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, meaning the antenna that read tag.</td>
+</tr>
+<tr>
+<td >EPC</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, EPC data.</td>
+</tr>
+<tr>
+<td >EPCString</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, the hexadecimal form of EPC.</td>
+</tr>
+<tr>
+<td >ReadCount</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, the number of times read.</td>
+</tr>
+<tr>
+<td >Tag</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, the tagdata form of EPC.</td>
+</tr>
+<tr>
+<td >Time</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, the time that the tag be read.</td>
+</tr>
+<tr>
+<td >EbdData</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, if a read operation was embedded in Inventory, then this attribute would contain the read data of another bank. If there is no read operation was embedded or the read operation failed then the attribute would be null.</td>
+</tr>
+<tr>
+<td >Rssi</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, Received Signal Strength Indicator.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Em_be_de_dC_md_Da_ta" IsSpecWord="yes">EmbededCmdData Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">In the Inventory operation, users can let the reader read data of another bank at the same time. This class is used for specify the details of the read operation.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Attribute</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >Bank</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, indicates the bank to be read.</td>
+</tr>
+<tr>
+<td >StartAddr</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, The starting address, in blocks, in bank.</td>
+</tr>
+<tr>
+<td >ByteCnt</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, The number of bytes to read.</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subitem">Constructor</div>
+<hr />
+<pre class="brush: csharp;">  
+public EmbededCmdData(MemBank bank_, UInt32 addr, byte datacnt)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >bank_</td>
+<td >The bank to read when inventory.</td>
+</tr>
+<tr>
+<td >addr</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, The starting address, in blocks,  in bank.</td>
+</tr>
+<tr>
+<td >datacnt</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> only, The number of bytes to read.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="An_tP_ow_er" IsSpecWord="yes">AntPower Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Transmit power setting of a single antenna</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Attributes</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >AntId</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> and write, the id of antenna.</td>
+</tr>
+<tr>
+<td >ReadPower</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> and write</td>
+</tr>
+<tr>
+<td >WritePower</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> and write</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Constructor</div>
+<pre class="brush: csharp;">  
+public AntPower(byte aid, UInt16 rpwr, UInt16 wpwr)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >aid</td>
+<td >ID of antenna, starting from 1.</td>
+</tr>
+<tr>
+<td >rpwr</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> power of the antenna, the unit is centi-dBm.</td>
+</tr>
+<tr>
+<td >wpwr</td>
+<td >Write power of antenna，the unit is centi-dBm.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Re_ad_er_Co_nf_ig_ur_at_ion" IsSpecWord="yes">ReaderConfiguration Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">The setting used when permanently saving the parameters of reader.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Attributes</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >ReaderConfCode</td>
+<td ><a href=Synchronous_Inventory.html#Re_ad>Read</a> and write</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subitem">Constructor</div>
+<hr />
+<pre class="brush: csharp;">  
+public ReaderConfiguration(SaveConfCode sccode)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >sccode</td>
+<td >SaveConf_Save indicates permanently saving configuration; SaveConf_Erase indicates deleting the configuration permanently saved, reader would use default parameter setting.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ba_ck_Re_ad_Op_ti_on" IsSpecWord="yes">BackReadOption Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">This parameter specifies all the details of the asynchronous inventory. </div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Attributes</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >ReadDuration</td>
+<td >Inventory cycle in milliseconds when using common asynchronous inventory mode. If using high-speed asynchronous inventory mode the attribute is meaningless.</td>
+</tr>
+<tr>
+<td >ReadInterval</td>
+<td >The idle interval in milliseconds between two Inventory cycle when using common asynchronous inventory mode. If using high-speed asynchronous inventory mode the attribute is meaningless.</td>
+</tr>
+<tr>
+<td >IsFastRead</td>
+<td >If true, use high speed asynchronous inventory mode, otherwise use common asynchronous inventory mode.</td>
+</tr>
+<tr>
+<td >FastReadDutyRation</td>
+<td >The upper 4 bits must be 0, the lower 4 bits are valid, and the lower 4 bits are used to indicate the proportion of time spent resting during the reader's inventory. If the FastReadDutyRation is 0-9 the proportion is FastReadDutyRation * 5%. If the FastReadDutyRation is 10-15 the proportion is 50%.</td>
+</tr>
+<tr>
+<td >FRTMetadata</td>
+<td >Specifies which metadata information the tag carries when using the high-speed asynchronous inventory mode. If using common asynchronous inventory mode the attribute is meaningless.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ba_ck_Re_ad_Op_ti_on_.F_as_tR_ea_dT_ag_Me_ta_Da_ta" IsSpecWord="yes">BackReadOption.FastReadTagMetaData Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Specifies which metadata information the tag carries when using the high-speed asynchronous inventory mode.</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Attributes</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >IsReadCnt</td>
+<td >The read count of the tag.</td>
+</tr>
+<tr>
+<td >IsRSSI</td>
+<td >Received Signal Strength Indication of the tag.</td>
+</tr>
+<tr>
+<td >IsAntennaID</td>
+<td >The antenna ID on which the tag is inventoried.</td>
+</tr>
+<tr>
+<td >IsFrequency</td>
+<td >The Frequency on which the tag is inventoried.</td>
+</tr>
+<tr>
+<td >IsTimestamp</td>
+<td >The time stamp when the tag is inventoried.</td>
+</tr>
+<tr>
+<td >IsRFU</td>
+<td >The Reserved field.</td>
+</tr>
+<tr>
+<td >IsEmdData</td>
+<td >The bank data of the tag, during inventorying reader can read tag data of another bank depending on the EmbededCmdOfInventory parameter.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+</div></div>
+</div></body>
+</html><script>
+$(function() {
+$(document).ready(function (){
+
+positionFooter();
+});
+$(window).resize(function () {
+positionFooter();
+});
+});
+</script>

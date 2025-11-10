@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/iframe.css" />
+<link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/jquery.jsonview.css" />
+<link rel="stylesheet" href="../styles/shCore.css" />
+<link rel="stylesheet" href="../styles/shCoreDefault.css" />
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/iframePage.js"></script>
+<script src="../js/utility_en.js"></script>
+<script src="../js/jquery.jsonview.js"></script>
+<script src="../scripts/shCore.js"></script>
+<script src="../scripts/shBrushJava.js"></script>
+<script src="../scripts/shBrushCpp.js"></script>
+<script src="../scripts/shBrushCSharp.js"></script>
+<script src="../scripts/shBrushJScript.js"></script>
+<script src="../scripts/shBrushPython.js"></script>
+<script src="../scripts/shBrushPlain.js"></script>
+</head>
+<body>
+<div class="box clearfix" id="footflag">
+<div class="top-bar">
+<div class="logo-box">
+<a >
+<img src="../images/top-logo.png" alt="" />
+</a>
+</div>
+<div class="title-box">
+<table>
+<tr>
+<td class="title-text">ModuleAPI C# Version Developer's Guide
+</td>
+<td>
+<a >
+<img src="../images/arrow.png"  style="width:39px; height:25px; padding-right:30px;" title="Back to document center"/>
+</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="side-bar">
+<ul id="mainmenu">
+</ul>
+</div>
+<div class="contain">
+<div class="iframeBox">
+<div class="iframe_title">Start Inventory</div>
+<div class="beftitle">
+&nbsp;&nbsp;
+</div>
+<div class="beftitle">
+Call the <a href=Start_Inventory.html#St_ar_tR_ea_di_ng>StartReading</a> method to start the asynchronous inventory. Before calling the <a href=Start_Inventory.html#St_ar_tR_ea_di_ng>StartReading</a> method, you must ensure that some parameters have been set correctly, and events related to asynchronous inventory have been registered, otherwise calling this method will throw an exception.
+</div>
+<div class="beftitle">
+&nbsp;&nbsp;
+</div>
+<ul class="inner_list">
+<li class="inter_list_item">The ReadPlan parameter of <a href=MODULETECH.html#Si_mp_le_Re_ad_Pl_an>SimpleReadPlan</a> must be set to specify the air interface protocol and the working antenna, otherwise an exception will be thrown.</li>
+<li class="inter_list_item">The <a href=MODULETECH.html#Ba_ck_Re_ad_Op_ti_on>BackReadOption</a> parameter must be set to specify the detailed configuration of the inventory operation, otherwise an exception will be thrown.</li>
+<li class="inter_list_item">The <a href=Start_Inventory.html#Ta_gs_Re_ad>TagsRead</a> event must be registered, otherwise the tags inventoried cannot be passed to the user program.</li>
+<li class="inter_list_item">The <a href=Start_Inventory.html#Re_ad_Ex_ce_pt_ion>ReadException</a> event must be registered, otherwise the reader exception state cannot be passed to the user program.</li>
+</ul>
+<div class="beftitle">
+&nbsp;
+</div>
+<div class="beftitle">
+If the reader is currently performing an asynchronous inventory, then calling the <a href=Start_Inventory.html#St_ar_tR_ea_di_ng>StartReading</a> method will throw an exception. If you are not sure about the current state of the reader, you can call the <a href=Stop_Inventory.html#St_op_Re_ad_ing>StopReading</a> method first before starting the inventory.
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="St_ar_tR_ea_di_ng" IsSpecWord="yes">StartReading Method</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Start the asynchronous inventory</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Method Signature</div>
+<pre class="brush: csharp;">  
+public void StartReading()
+</pre>  
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Example</div>
+<pre class="brush: csharp;">  
+rdr. StartReading();
+</pre>  
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ta_gs_Re_ad" IsSpecWord="yes">TagsRead Event</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Fires when tags are inventoried to pass the tag data to the user program by the parameter of the <a href=Start_Inventory.html#Ta_gs_Re_ad_Ev_en_tA_rgs>TagsReadEventArgs</a> type.</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Event Type</div>
+<pre class="brush: csharp;">  
+EventHandler&lt;TagsReadEventArgs&gt;
+</pre>  
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Re_ad_Ex_ce_pt_ion" IsSpecWord="yes">ReadException Event</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Fires when exception occurs to pass the exception details to the user program by the parameter of the <a href=Start_Inventory.html#Re_ad_Ex_ce_pt_io_nE_ve_nt_Ar_gs>ReadExceptionEventArgs</a> type.</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Event Type</div>
+<pre class="brush: csharp;">  
+EventHandler&lt;ReadExceptionEventArgs&gt;
+</pre>  
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Gp_iT_ri_gg_er" IsSpecWord="yes">GpiTrigger Event</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">If asynchronous Inventory is configured to start by <a href=Start_Inventory.html#Gp_iT_ri_gg_er>GpiTrigger</a>, fires when gpi trigger condition is met to pass the current gpi states to the user program by the parameter of the <a href=Start_Inventory.html#Gp_iT_ri_gg_er_Ev_en_tA_rgs>GpiTriggerEventArgs</a> type.</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Event Type</div>
+<pre class="brush: csharp;">  
+EventHandler&lt;GpiTriggerEventArgs&gt;
+</pre>  
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Gp_iT_ri_gg_er_Bo_un_da_ry" IsSpecWord="yes">GpiTriggerBoundary Event</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">If asynchronous Inventory is configured to start by <a href=Start_Inventory.html#Gp_iT_ri_gg_er>GpiTrigger</a>, fires when starting or stoping asynchronous Inventory to pass the causes of starting or stopping inventory to the user program by the parameter of the <a href=Start_Inventory.html#Gp_iT_ri_gg_er_Bo_un_da_ry_Ev_en_tA_rgs>GpiTriggerBoundaryEventArgs</a> type.</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Event Type</div>
+<pre class="brush: csharp;">  
+EventHandler&lt;GpiTriggerBoundaryEventArgs&gt;
+</pre>  
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ta_gs_Re_ad_Ev_en_tA_rgs" IsSpecWord="yes">TagsReadEventArgs Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">The parameter of the <a href=Start_Inventory.html#Ta_gs_Re_ad>TagsRead</a> event, used to pass the tags' data inventoried.</div>
+<div   class="inner_title">&nbsp;</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >Tags</td>
+<td >The tags' data inventoried.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Re_ad_Ex_ce_pt_io_nE_ve_nt_Ar_gs" IsSpecWord="yes">ReadExceptionEventArgs Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">The parameter of the <a href=Start_Inventory.html#Re_ad_Ex_ce_pt_ion>ReadException</a> event, used to pass the exception details.</div>
+<div   class="inner_title">&nbsp;</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >ReaderException</td>
+<td >The reader exception.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Gp_iT_ri_gg_er_Ev_en_tA_rgs" IsSpecWord="yes">GpiTriggerEventArgs Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title"> The <a href=Start_Inventory.html#Gp_iT_ri_gg_er>GpiTrigger</a> event parameter, which is used to pass the GPI status and trigger condition number when starting and stopping the asynchronous inventory.</div>
+<div   class="inner_title">&nbsp;</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >GpiStates</td>
+<td >The GPI status when triggering start or stop asynchronous inventory.</td>
+</tr>
+<tr>
+<td >TriggerId</td>
+<td >The condition number that triggers the start or stop of the asynchronous inventory.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Gp_iT_ri_gg_er_Bo_un_da_ry_Ev_en_tA_rgs" IsSpecWord="yes">GpiTriggerBoundaryEventArgs Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">The parameter of the <a href=Start_Inventory.html#Gp_iT_ri_gg_er_Bo_un_da_ry>GpiTriggerBoundary</a> event, used to pass the reason for starting and stopping asynchronous inventory.</div>
+<div   class="inner_title">&nbsp;</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Attribute</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >Reason</td>
+<td >The cause of starting or stopping inventory.</td>
+</tr>
+<tr>
+<td >BoundaryType</td>
+<td >Starting or stopping inventory.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+</div></div>
+</div></body>
+</html><script>
+$(function() {
+$(document).ready(function (){
+
+positionFooter();
+});
+$(window).resize(function () {
+positionFooter();
+});
+});
+</script>

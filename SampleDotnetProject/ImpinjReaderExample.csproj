@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>ImpinjReaderExample</RootNamespace>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 
+    IMPORTANT: You need to obtain ModuleAPI.dll from your provider.
+    Place it in the same directory as this .csproj file, or update the path below.
+    -->
+    <Reference Include="ModuleAPI">
+      <HintPath>ModuleAPI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="ExampleProgram.cs" />
+  </ItemGroup>
+
+</Project>

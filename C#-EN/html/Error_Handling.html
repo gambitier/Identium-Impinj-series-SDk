@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/iframe.css" />
+<link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/jquery.jsonview.css" />
+<link rel="stylesheet" href="../styles/shCore.css" />
+<link rel="stylesheet" href="../styles/shCoreDefault.css" />
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/iframePage.js"></script>
+<script src="../js/utility_en.js"></script>
+<script src="../js/jquery.jsonview.js"></script>
+<script src="../scripts/shCore.js"></script>
+<script src="../scripts/shBrushJava.js"></script>
+<script src="../scripts/shBrushCpp.js"></script>
+<script src="../scripts/shBrushCSharp.js"></script>
+<script src="../scripts/shBrushJScript.js"></script>
+<script src="../scripts/shBrushPython.js"></script>
+<script src="../scripts/shBrushPlain.js"></script>
+</head>
+<body>
+<div class="box clearfix" id="footflag">
+<div class="top-bar">
+<div class="logo-box">
+<a >
+<img src="../images/top-logo.png" alt="" />
+</a>
+</div>
+<div class="title-box">
+<table>
+<tr>
+<td class="title-text">ModuleAPI C# Version Developer's Guide
+</td>
+<td>
+<a >
+<img src="../images/arrow.png"  style="width:39px; height:25px; padding-right:30px;" title="Back to document center"/>
+</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="side-bar">
+<ul id="mainmenu">
+</ul>
+</div>
+<div class="contain">
+<div class="iframeBox">
+<div class="iframe_title">Error Handling</div>
+<div class="beftitle">
+&nbsp;
+</div>
+<div class="beftitle">
+All methods of the Reader class may throw an exception, so calling the methods of the Reader class should include code that catches the exception. If the System.IO.IOException is caught, you should re-create the instance of the Reader class after calling the Disconnet method.
+</div>
+<div class="beftitle">
+&nbsp;&nbsp;
+</div>
+<div class="beftitle">
+For several operations such as <a href=Synchronous_Inventory.html#Re_ad>Read</a>，<a href=kill_Tag.html#Ki_ll_Tag>KillTag</a>，<a href=Lock_Tag.html#Lo_ck_Tag>LockTag</a>，<a href=Read_Tag.html#Re_ad_Ta_gM_em_Wo_rds>ReadTagMemWords</a>，<a href=Write_Tag_EPC.html#Wr_it_eT_ag>WriteTag</a>，<a href=Write_Tag.html#Wr_it_eT_ag_Me_mW_or_ds>WriteTagMemWords</a>，<a href=Get_Parameters.html#Pa_ra_mG_et>ParamGet</a> and <a href=Set_Parameters.html#Pa_ra_mS_et>ParamSet</a>, If you catch OpFaidedException that means only this operation was failed and you can continue doing tag operations.
+</div>
+<div class="beftitle">
+&nbsp;
+</div>
+<div class="beftitle">
+HardwareAlertException indicates there are some improper operations which can cause these exception and hardware damage. These operations include: 
+</div>
+<ul class="inner_list">
+<li class="inter_list_item">Transmit power through antenna ports without antenna connection</li>
+<li class="inter_list_item">Use the unqualified antennas</li>
+<li class="inter_list_item">High ambient temperature</li>
+<li class="inter_list_item">High return loss caused by metal plate in front of antennas</li>
+</ul>
+<div class="beftitle">
+It would be best to turn off the reader and check the working condition and working environment for these errors.
+</div>
+<div class="beftitle">
+&nbsp;
+</div>
+<div class="beftitle">
+All the methods, except for <a href=Reader_Life_Cycle.html#Cr_ea_te>Create</a> method of Reader class，of the current version of development kit are not thread-safe for the same reader instance. For different reader instances there is no such limit.
+</div>
+</div></div>
+</div></body>
+</html><script>
+$(function() {
+$(document).ready(function (){
+
+positionFooter();
+});
+$(window).resize(function () {
+positionFooter();
+});
+});
+</script>

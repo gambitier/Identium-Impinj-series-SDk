@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/iframe.css" />
+<link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/jquery.jsonview.css" />
+<link rel="stylesheet" href="../styles/shCore.css" />
+<link rel="stylesheet" href="../styles/shCoreDefault.css" />
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/iframePage.js"></script>
+<script src="../js/utility_en.js"></script>
+<script src="../js/jquery.jsonview.js"></script>
+<script src="../scripts/shCore.js"></script>
+<script src="../scripts/shBrushJava.js"></script>
+<script src="../scripts/shBrushCpp.js"></script>
+<script src="../scripts/shBrushCSharp.js"></script>
+<script src="../scripts/shBrushJScript.js"></script>
+<script src="../scripts/shBrushPython.js"></script>
+<script src="../scripts/shBrushPlain.js"></script>
+</head>
+<body>
+<div class="box clearfix" id="footflag">
+<div class="top-bar">
+<div class="logo-box">
+<a >
+<img src="../images/top-logo.png" alt="" />
+</a>
+</div>
+<div class="title-box">
+<table>
+<tr>
+<td class="title-text">ModuleAPI C# Version Developer's Guide
+</td>
+<td>
+<a >
+<img src="../images/arrow.png"  style="width:39px; height:25px; padding-right:30px;" title="Back to document center"/>
+</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="side-bar">
+<ul id="mainmenu">
+</ul>
+</div>
+<div class="contain">
+<div class="iframeBox">
+<div class="iframe_title">MODULETECH.GEN2</div>
+<div class="beftitle">
+&nbsp;&nbsp;&nbsp;
+</div>
+<div class="beftitle">
+There are some classes and enumeration about Gen2 protocol to be used when inventory, reading, writing, locking and destroying a tag. They are mainly defined in this namespace.
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Se_ss_ion" IsSpecWord="yes">Session Enumeration</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Define four <a href=MODULETECH_GEN2.html#Se_ss_ion>Session</a> of the GEN2 protocol.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Member</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >Session0</td>
+<td >Gen2 Session0</td>
+</tr>
+<tr>
+<td >Session1</td>
+<td >Gen2 Session1</td>
+</tr>
+<tr>
+<td >Session2</td>
+<td >Gen2 Session2</td>
+</tr>
+<tr>
+<td >Session3</td>
+<td >Gen2 Session3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Me_mB_ank" IsSpecWord="yes">MemBank Enumeration</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Define four banks of GEN2 tag.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Member</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >RESERVED</td>
+<td >Reserve bank</td>
+</tr>
+<tr>
+<td >EPC</td>
+<td >EPC bank</td>
+</tr>
+<tr>
+<td >TID</td>
+<td >TID bank</td>
+</tr>
+<tr>
+<td >USER</td>
+<td >User bank</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ge_n2_Lo_ck_Act" IsSpecWord="yes">Gen2LockAct Enumeration</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Define the memory area and type of tag locking operation.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Member</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >ACCESS_LOCK</td>
+<td >Temporarily lock access password</td>
+</tr>
+<tr>
+<td >ACCESS_PERMALOCK</td>
+<td >Permanently lock access password</td>
+</tr>
+<tr>
+<td >ACCESS_UNLOCK</td>
+<td >Unlock access password</td>
+</tr>
+<tr>
+<td >EPC_LOCK</td>
+<td >Temporarily lock EPC bank</td>
+</tr>
+<tr>
+<td >EPC_PERMALOCK</td>
+<td >Permanently lock EPC bank</td>
+</tr>
+<tr>
+<td >EPC_UNLOCK</td>
+<td >Unlock EPC bank</td>
+</tr>
+<tr>
+<td >KILL_LOCK</td>
+<td >Temporarily lock kill password</td>
+</tr>
+<tr>
+<td >KILL_PERMALOCK</td>
+<td >Permanently lock kill password</td>
+</tr>
+<tr>
+<td >KILL_UNLOCK</td>
+<td >Unlock kill password</td>
+</tr>
+<tr>
+<td >TID_LOCK</td>
+<td >Temporarily lock TID bank</td>
+</tr>
+<tr>
+<td >TID_PERMALOCK</td>
+<td >Permanently lock TID bank</td>
+</tr>
+<tr>
+<td >TID_UNLOCK</td>
+<td >Unlock TID bank</td>
+</tr>
+<tr>
+<td >USER_LOCK</td>
+<td >Temporarily lock USER bank</td>
+</tr>
+<tr>
+<td >USER_PERMALOCK</td>
+<td >Permanently lock USER bank</td>
+</tr>
+<tr>
+<td >USER_UNLOCK</td>
+<td >Unlock USER bank</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ge_n2_Lo_ck_Ac_ti_on" IsSpecWord="yes">Gen2LockAction Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">The action of locking tag.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subitem">Constructor</div>
+<hr />
+<pre class="brush: csharp;">  
+public Gen2LockAction(ModuleTech.Gen2.Gen2LockAct[] acts)
+</pre>  
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >acts</td>
+<td >Store the locking actions.</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Example</div>
+<div   class="inner_title">If you want to temporarily lock EPC, unlock USER and permanently lock access password the code would be as following.</div>
+<pre class="brush: csharp;">  
+Gen2LockAct [] acts = new Gen2LockAct[3];
+acts[0] = Gen2LockAct.EPC_LOCK;
+acts[1] = Gen2LockAct.TID_UNLOCK;
+acts[2] = Gen2LockAct.ACCESS_PERMALOCK;
+Gen2LockAction lockact = new Gen2LockAction(acts);
+</pre>  
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ge_n2_Ta_gF_il_ter" IsSpecWord="yes">Gen2TagFilter Class</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Users can add filter option when executing inventory, reading, writing, locking and kill tag operations so that only the tag which match the filter criteria would be operated.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subitem">Constructor</div>
+<hr />
+<pre class="brush: csharp;">  
+public Gen2TagFilter(int filterlen, byte[] filterdata, MemBank filterbank, int filteraddr, bool isInvert)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameters</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >Filterlen</td>
+<td >The length of data to be compared,in bits.</td>
+</tr>
+<tr>
+<td >Filterdata</td>
+<td >Data to compare, when filterlen is not the integral multiple of 8, the length of filterdata is (filterlen-1) /8 + 1.</td>
+</tr>
+<tr>
+<td >Filterbank</td>
+<td >The bank to filter.</td>
+</tr>
+<tr>
+<td >Filteraddr</td>
+<td >The starting address of filtering,in bits, There are several tags in the field of an antenna. Among them there is only one tag whose EPC ID start with 1101. Now we need to read the TID of this tag then we can use the parameter <a href=MODULETECH_GEN2.html#Ge_n2_Ta_gF_il_ter>Gen2TagFilter</a> to ensure that the reading.</td>
+</tr>
+<tr>
+<td >isInvert</td>
+<td >Rule of filter，false means matching the filter criteria，true  means not matching the filter criteria.</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Example</div>
+<div   class="inner_title">There are several tags in the field of an antenna. Among them there is only one tag whose EPC ID start with 1101. Now we need to read the TID of this tag then we can use the parameter <a href=MODULETECH_GEN2.html#Ge_n2_Ta_gF_il_ter>Gen2TagFilter</a> to ensure that the reading operation is on the right tag. The code is as following.</div>
+<pre class="brush: csharp;">  
+int bitcnt = 0;
+string binarystr = “1101”;
+byte[] filterbytes = new byte[(binarystr.Length-1)/8+1];
+for (int c = 0; c &lt; filterbytes.Length; ++c)
+	filterbytes[c] = 0;
+foreach (Char ch in binarystr)
+{
+	if (ch == '1')
+		filterbytes[bitcnt / 8] |= (byte)(0x01 &lt;&lt; (7 - bitcnt % 8));
+	bitcnt++;
+}
+Gen2TagFilter filter = new Gen2TagFilter(binarystr.Length, filterbytes, ModuleTech.Gen2.MemBank.EPC, 32, false);
+</pre>  
+</div>
+</div>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Ta_rg_et" IsSpecWord="yes">Target Enumeration</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Define the target of the GEN2 protocol.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Member</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >A</td>
+<td >Search for tags in State A.</td>
+</tr>
+<tr>
+<td >B</td>
+<td >Search for tags in State B.</td>
+</tr>
+<tr>
+<td >AB</td>
+<td >Search for tags in State A, then switch to B.</td>
+</tr>
+<tr>
+<td >BA</td>
+<td >Search for tags in State B, then switch to A.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Wr_it_eM_ode" IsSpecWord="yes">WriteMode Enumeration</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Define the write mode of tag wrtie operation.</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Member</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >WORD_ONLY</td>
+<td >Use the Write command of Gen2 air interface for tag write operation.</td>
+</tr>
+<tr>
+<td >BLOCK_ONLY</td>
+<td >Use the BlockWrite command of Gen2 air interface for tag write operation.</td>
+</tr>
+<tr>
+<td >BLOCK_FALLBACK</td>
+<td >Temporarily not supported.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+</div></div>
+</div></body>
+</html><script>
+$(function() {
+$(document).ready(function (){
+
+positionFooter();
+});
+$(window).resize(function () {
+positionFooter();
+});
+});
+</script>

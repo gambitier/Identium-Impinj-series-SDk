@@ -1,0 +1,51 @@
+/*css 初始化 */
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    /*background: #E5E5E5;*/
+
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/*防止拖动 影响布局*/
+/*textarea {*/
+    /*resize: none;*/
+/*}*/
+
+/*去掉行内替换元素空白缝隙*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/iframe.css" />
+<link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/jquery.jsonview.css" />
+<link rel="stylesheet" href="../styles/shCore.css" />
+<link rel="stylesheet" href="../styles/shCoreDefault.css" />
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/iframePage.js"></script>
+<script src="../js/utility_en.js"></script>
+<script src="../js/jquery.jsonview.js"></script>
+<script src="../scripts/shCore.js"></script>
+<script src="../scripts/shBrushJava.js"></script>
+<script src="../scripts/shBrushCpp.js"></script>
+<script src="../scripts/shBrushCSharp.js"></script>
+<script src="../scripts/shBrushJScript.js"></script>
+<script src="../scripts/shBrushPython.js"></script>
+<script src="../scripts/shBrushPlain.js"></script>
+</head>
+<body>
+<div class="box clearfix" id="footflag">
+<div class="top-bar">
+<div class="logo-box">
+<a >
+<img src="../images/top-logo.png" alt="" />
+</a>
+</div>
+<div class="title-box">
+<table>
+<tr>
+<td class="title-text">ModuleAPI C# Version Developer's Guide
+</td>
+<td>
+<a >
+<img src="../images/arrow.png"  style="width:39px; height:25px; padding-right:30px;" title="Back to document center"/>
+</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="side-bar">
+<ul id="mainmenu">
+</ul>
+</div>
+<div class="contain">
+<div class="iframeBox">
+<div class="iframe_title">Get GPI</div>
+<div class="beftitle">
+&nbsp;
+</div>
+<div class="beftitle">
+There are two methods to get the GPI state, one is to get only one GPI pin's state at a time, and the other is to get all the reader's GPI pins' states at a time.
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="GP_IG_et" IsSpecWord="yes">GPIGet Methods</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Get the state/states of one GPI pin or all the pins of reader</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subitem">Method One</div>
+<hr />
+<div   class="inner_title gray_title">Get the state of one GPI pin</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Method Signature</div>
+<pre class="brush: csharp;">  
+public abstract bool GPIGet(int pin)
+</pre>  
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >pin</td>
+<td >GPI ID，one-based numbering</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Return Value</div>
+<div   class="inner_title">The state of the GPI pin</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Example</div>
+<div   class="inner_title">Get the state of GPI pin 1</div>
+<pre class="brush: csharp;">  
+bool gpi1 = rdr. GPIGet(1);
+</pre>  
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subitem">Method Two</div>
+<hr />
+<div   class="inner_title gray_title">Get the states of all the GPI pins of reader</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Method Signature</div>
+<pre class="brush: csharp;">  
+public GPIState[] GPIGet()
+</pre>  
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Return Value</div>
+<div   class="inner_title">The states of all the GPI pins of reader</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Example</div>
+<pre class="brush: csharp;">  
+GPIState[] gstates = rdr. GPIGet();
+</pre>  
+</div>
+</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+</div></div>
+</div></body>
+</html><script>
+$(function() {
+$(document).ready(function (){
+
+positionFooter();
+});
+$(window).resize(function () {
+positionFooter();
+});
+});
+</script>

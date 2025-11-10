@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/iframe.css" />
+<link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/jquery.jsonview.css" />
+<link rel="stylesheet" href="../styles/shCore.css" />
+<link rel="stylesheet" href="../styles/shCoreDefault.css" />
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/iframePage.js"></script>
+<script src="../js/utility_en.js"></script>
+<script src="../js/jquery.jsonview.js"></script>
+<script src="../scripts/shCore.js"></script>
+<script src="../scripts/shBrushJava.js"></script>
+<script src="../scripts/shBrushCpp.js"></script>
+<script src="../scripts/shBrushCSharp.js"></script>
+<script src="../scripts/shBrushJScript.js"></script>
+<script src="../scripts/shBrushPython.js"></script>
+<script src="../scripts/shBrushPlain.js"></script>
+</head>
+<body>
+<div class="box clearfix" id="footflag">
+<div class="top-bar">
+<div class="logo-box">
+
+</div>
+<div class="title-box">
+<table>
+<tr>
+<td class="title-text">ModuleAPI C# Version Developer's Guide
+</td>
+<td>
+<a>
+<img src="../images/arrow.png"  style="width:39px; height:25px; padding-right:30px;" title="Back to document center"/>
+</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="side-bar">
+<ul id="mainmenu">
+</ul>
+</div>
+<div class="contain">
+<div class="iframeBox">
+<div class="iframe_title">Asynchronous Inventory</div>
+<div class="beftitle">
+&nbsp;
+</div>
+<div class="beftitle">
+The SDK can implement asynchronous inventory in two ways. One is to internally use a thread to call the synchronous inventory method <a href=Synchronous_Inventory.html#Re_ad>Read</a> method. This asynchronous Inventory is called common asynchronous Inventory mode. The other is a true asynchronous inventory, where the reader is in a continuous inventory state. In this way, the inventory performance of the reader is optimal, and applications with higher inventory performance requirements should use this mode of asynchronous inventory. This asynchronous Inventory is called high-speed asynchronous Inventory mode. 
+</div>
+<div class="beftitle">
+&nbsp;
+</div>
+<div class="beftitle">
+Attention: Not all device types support asynchronous high-speed inventory mode. Only those readers built with R2000 RF chips can support this inventory mode.
+</div>
+<div class="beftitle">
+&nbsp;
+</div>
+<div class="beftitle">
+During asynchronous inventory, if tags are inventoried, the <a href=Start_Inventory.html#Ta_gs_Re_ad>TagsRead</a> event will be triggered to pass the tag data to the user program; if the reader has an abnormal condition, the <a href=Start_Inventory.html#Re_ad_Ex_ce_pt_ion>ReadException</a> event will be triggered to pass the exception details to the user program; if the asynchronous inventory is configured To start or stop with a GPI trigger, the <a href=Start_Inventory.html#Gp_iT_ri_gg_er>GpiTrigger</a> and <a href=Start_Inventory.html#Gp_iT_ri_gg_er_Bo_un_da_ry>GpiTriggerBoundary</a> events are triggered when the GPI condition is met.
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p >Asynchronous Inventory Methods</p>
+</div>
+<div class="content_inner block" >
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Method</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >Reader.<a href=Start_Inventory.html#St_ar_tR_ea_di_ng>StartReading</a></td>
+<td >Start asynchronous Inventory</td>
+</tr>
+<tr>
+<td >Reader.<a href=Stop_Inventory.html#St_op_Re_ad_ing>StopReading</a></td>
+<td >Stop asynchronous Inventory</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p >Asynchronous Inventory Events</p>
+</div>
+<div class="content_inner block" >
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Event</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >Reader. <a href=Start_Inventory.html#Ta_gs_Re_ad>TagsRead</a></td>
+<td >Fires when tags are inventoried</td>
+</tr>
+<tr>
+<td >Reader. <a href=Start_Inventory.html#Re_ad_Ex_ce_pt_ion>ReadException</a></td>
+<td >Fires when exception occurs</td>
+</tr>
+<tr>
+<td >Reader. <a href=Start_Inventory.html#Gp_iT_ri_gg_er>GpiTrigger</a></td>
+<td >Fires when gpi trigger condition is met if asynchronous Inventory is configured to start  by <a href=Start_Inventory.html#Gp_iT_ri_gg_er>GpiTrigger</a>.</td>
+</tr>
+<tr>
+<td >Reader. <a href=Start_Inventory.html#Gp_iT_ri_gg_er_Bo_un_da_ry>GpiTriggerBoundary</a></td>
+<td >Fires when starting or stoping asynchronous Inventory if asynchronous Inventory is configured to start by <a href=Start_Inventory.html#Gp_iT_ri_gg_er>GpiTrigger</a>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+</div></div>
+</div></body>
+</html><script>
+$(function() {
+$(document).ready(function (){
+
+positionFooter();
+});
+$(window).resize(function () {
+positionFooter();
+});
+});
+</script>

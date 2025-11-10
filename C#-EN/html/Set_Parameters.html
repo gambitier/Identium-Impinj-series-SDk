@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/iframe.css" />
+<link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/jquery.jsonview.css" />
+<link rel="stylesheet" href="../styles/shCore.css" />
+<link rel="stylesheet" href="../styles/shCoreDefault.css" />
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/iframePage.js"></script>
+<script src="../js/utility_en.js"></script>
+<script src="../js/jquery.jsonview.js"></script>
+<script src="../scripts/shCore.js"></script>
+<script src="../scripts/shBrushJava.js"></script>
+<script src="../scripts/shBrushCpp.js"></script>
+<script src="../scripts/shBrushCSharp.js"></script>
+<script src="../scripts/shBrushJScript.js"></script>
+<script src="../scripts/shBrushPython.js"></script>
+<script src="../scripts/shBrushPlain.js"></script>
+</head>
+<body>
+<div class="box clearfix" id="footflag">
+<div class="top-bar">
+<div class="logo-box">
+<a >
+<img src="../images/top-logo.png" alt="" />
+</a>
+</div>
+<div class="title-box">
+<table>
+<tr>
+<td class="title-text">ModuleAPI C# Version Developer's Guide
+</td>
+<td>
+<a >
+<img src="../images/arrow.png"  style="width:39px; height:25px; padding-right:30px;" title="Back to document center"/>
+</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="side-bar">
+<ul id="mainmenu">
+</ul>
+</div>
+<div class="contain">
+<div class="iframeBox">
+<div class="iframe_title">Set Parameter</div>
+<div class="beftitle">
+&nbsp;&nbsp;
+</div>
+<div class="beftitle">
+The Reader.<a href=Set_Parameters.html#Pa_ra_mS_et>ParamSet</a> is the method for setting the parameter of reader. You can call this method at any time during the lifetime of the Reader class instance. Once the parameter was set, it will be effect in the whole life cycle of reader unless it is modified.
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Pa_ra_mS_et" IsSpecWord="yes">ParamSet Method</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Set a reader's parameter</div>
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Method Signature</div>
+<pre class="brush: csharp;">  
+public void ParamSet(string key, object value)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >key</td>
+<td >The name of the parameter.</td>
+</tr>
+<tr>
+<td >value</td>
+<td >The value of the parameter.</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Example</div>
+<div   class="inner_title">Set the Gen2Session of reader as <a href=MODULETECH_GEN2.html#Se_ss_ion>Session</a> 0.</div>
+<pre class="brush: csharp;">  
+rdr.ParamSet("Gen2Session", Session.Session0);
+</pre>  
+</div>
+</div>
+</div></div>
+</div></body>
+</html><script>
+$(function() {
+$(document).ready(function (){
+
+positionFooter();
+});
+$(window).resize(function () {
+positionFooter();
+});
+});
+</script>

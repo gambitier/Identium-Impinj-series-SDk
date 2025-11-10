@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/iframe.css" />
+<link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/jquery.jsonview.css" />
+<link rel="stylesheet" href="../styles/shCore.css" />
+<link rel="stylesheet" href="../styles/shCoreDefault.css" />
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/iframePage.js"></script>
+<script src="../js/utility_en.js"></script>
+<script src="../js/jquery.jsonview.js"></script>
+<script src="../scripts/shCore.js"></script>
+<script src="../scripts/shBrushJava.js"></script>
+<script src="../scripts/shBrushCpp.js"></script>
+<script src="../scripts/shBrushCSharp.js"></script>
+<script src="../scripts/shBrushJScript.js"></script>
+<script src="../scripts/shBrushPython.js"></script>
+<script src="../scripts/shBrushPlain.js"></script>
+</head>
+<body>
+<div class="box clearfix" id="footflag">
+<div class="top-bar">
+<div class="logo-box">
+<a >
+<img src="../images/top-logo.png" alt="" />
+</a>
+</div>
+<div class="title-box">
+<table>
+<tr>
+<td class="title-text">ModuleAPI C# Version Developer's Guide
+</td>
+<td>
+<a >
+<img src="../images/arrow.png"  style="width:39px; height:25px; padding-right:30px;" title="Back to document center"/>
+</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="side-bar">
+<ul id="mainmenu">
+</ul>
+</div>
+<div class="contain">
+<div class="iframeBox">
+<div class="iframe_title">Synchronous Inventory</div>
+<div class="beftitle">
+&nbsp;&nbsp;
+</div>
+<div class="beftitle">
+Synchronous inventory is implemented using the Reader.<a href=Synchronous_Inventory.html#Re_ad>Read</a> method, which blocks until the end of the inventory. When the user needs to perform a short period of inventory operation, and the number of tags is not a lot, the Reader.<a href=Synchronous_Inventory.html#Re_ad>Read</a> method is a good choice. You can use the method anytime.
+</div>
+<div class="content-box">
+<div class="content-title clearfix">
+<div class="icon_triangle open"></div>
+<p id="Re_ad" IsSpecWord="yes">Read Method</p>
+</div>
+<div class="content_inner block" >
+<div   class="inner_title gray_title">Implementing synchronous inventory operation, You must ensure that the ReadPlan parameter is set before calling this method, otherwise an exception will be thrown. </div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Method Signature</div>
+<pre class="brush: csharp;">  
+public abstract ModuleTech.TagReadData[] Read(int milliseconds)
+</pre>  
+<div   class="inner_title">&nbsp;&nbsp;</div>
+<div   class="inner_subtitle">Parameters</div>
+<table class="apidoctab">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td >milliseconds</td>
+<td >The execution time duration in milliseconds. The method would block  at least this time duration.</td>
+</tr>
+</tbody>
+</table>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Return Value</div>
+<div   class="inner_title">The tags inverntoried, an instance of the <a href=MODULETECH.html#Ta_gR_ea_dD_ata>TagReadData</a> class contains all the information of the tag.</div>
+<div   class="inner_title">&nbsp;</div>
+<div   class="inner_subtitle">Example</div>
+<div   class="inner_title">Tag Inventory with antenna1, 3 and 4, only read the tags that its EPC code starts with 0x1234, embedded reading instruction which read data of two blocks from the second block of TID area.</div>
+<pre class="brush: csharp;">  
+EmbededCmdData ecd = new EmbededCmdData(MemBank.TID, 2, 4);
+rdr.ParamSet("EmbededCmdOfInventory", ecd);
+byte[] fdata = ByteFormat.FromHex(“1234”);
+Gen2TagFilter filter = new Gen2TagFilter(fdata.Length*8, fdata ,ModuleTech.Gen2.MemBank.EPC, 32, false);
+rdr.ParamSet("Singulation", filter);
+int [] ants = new int[]{1, 3, 4};
+SimpleReadPlan searchPlan = new SimpleReadPlan(ants);
+rdr.ParamSet("ReadPlan", searchPlan);
+TagReadData[] tags = rdr.Read(500);
+</pre>  
+</div>
+</div>
+<div   class="inner_title">&nbsp;&nbsp;&nbsp;</div>
+</div></div>
+</div></body>
+</html><script>
+$(function() {
+$(document).ready(function (){
+
+positionFooter();
+});
+$(window).resize(function () {
+positionFooter();
+});
+});
+</script>
