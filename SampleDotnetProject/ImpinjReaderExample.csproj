@@ -4,22 +4,18 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net48</TargetFramework>
     <RootNamespace>ImpinjReaderExample</RootNamespace>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <!-- 
-    IMPORTANT: You need to obtain ModuleAPI.dll from your provider.
-    Place it in the same directory as this .csproj file, or update the path below.
+    ModuleAPI.dll is included in this project directory.
+    It was extracted from Identium_IPJSeries_LatestDemo_260425.zip
     -->
     <Reference Include="ModuleAPI">
-      <HintPath>ModuleAPI.dll</HintPath>
+      <HintPath>$(MSBuildProjectDirectory)/ModuleAPI.dll</HintPath>
       <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="ExampleProgram.cs" />
   </ItemGroup>
 
 </Project>
