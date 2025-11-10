@@ -3,7 +3,7 @@
 ## Prerequisites
 
 1. **.NET Framework SDK** (version 4.8 or later) or **Visual Studio**
-2. **ModuleAPI.dll** - The SDK DLL file from your provider
+2. **ModuleAPI.dll** - The SDK DLL file (found in `Identium_IPJSeries_LatestDemo_260425.zip` in the root directory)
 3. **RFID Reader** - An Impinj RFID reader connected to your network (or COM port)
 
 ## Method 1: Using Visual Studio (Recommended)
